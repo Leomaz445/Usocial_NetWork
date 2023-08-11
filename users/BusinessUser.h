@@ -17,6 +17,7 @@ public:
     * @brief Default constructor for the BusinessUser class.
     */
     BusinessUser() = default;
+
     /**
      * @brief Send a message to another user.
     *

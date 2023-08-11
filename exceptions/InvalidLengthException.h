@@ -9,8 +9,9 @@
 
 class InvalidLengthException : public std::exception {
 public:
-    const char * what() const noexcept override {
+    const char *what() const noexcept override {
         return "Post must be between 1 and 255 characters long.";
     }
 };
+
 #endif //UNTITLED3_NULLUSEREXCEPTION_H

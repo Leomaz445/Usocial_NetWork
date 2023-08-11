@@ -9,8 +9,9 @@
 
 class CrossNetworkMsgError : public std::exception {
 public:
-    const char * what() const noexcept override {
+    const char *what() const noexcept override {
         return "Users must belong to the same USocial network to communicate.";
     }
 };
+
 #endif //UNTITLED3_CROSSNETWORKMSGERROR_H

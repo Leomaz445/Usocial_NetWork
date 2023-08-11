@@ -9,8 +9,9 @@
 
 class InvalidFriendNameException : public std::exception {
 public:
-    const char * what() const noexcept override {
+    const char *what() const noexcept override {
         return "Friend name is empty.";
     }
 };
+
 #endif //UNTITLED3_INVALIDFRIENDNAMEEXCEPTION_H

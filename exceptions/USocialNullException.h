@@ -4,11 +4,12 @@
 
 #ifndef UNTITLED3_USOCIALNULLEXCEPTION_H
 #define UNTITLED3_USOCIALNULLEXCEPTION_H
+
 #include <stdexcept>
 
-class USocialNullException: public std::exception {
+class USocialNullException : public std::exception {
 public:
-    const char * what() const noexcept override {
+    const char *what() const noexcept override {
         return "USocial object not initialized.";
     }
 };

@@ -5,6 +5,7 @@
 
 #ifndef UNTITLED3_MEDIA_H
 #define UNTITLED3_MEDIA_H
+
 /**
  * @brief Abstract base class for different media types.
  */
@@ -13,12 +14,12 @@ public:
     /**
     * @brief Virtual function to display media content.
     */
-    virtual void display()=0;
+    virtual void display() = 0;
 
     /**
     * @brief Default virtual destructor.
     */
-    virtual ~Media()= default;
+    virtual ~Media() = default;
 };
 
 

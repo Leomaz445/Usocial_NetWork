@@ -144,16 +144,32 @@ int main() {
 
     try {
         u11->addFriend(u12);
-    }catch(const std::exception &e){
+    } catch (const std::exception &e) {
         std::cout << "error: " << e.what() << std::endl;
     }
 //----------------------------------------------------------------------------------------------------------------------
     std::cout << "------------------------------" << std::endl;
     std::cout << "Trying to send a message to a different friend" << std::endl;
-    auto u13 = us1.registerUser("shlomi",true);
+    auto u13 = us1.registerUser("shlomi", true);
     try {
         u13->sendMessage(u12, new Message("check"));
-    }catch(const std::exception &e){
+    } catch (const std::exception &e) {
+        std::cout << "error: " << e.what() << std::endl;
+    }
+//----------------------------------------------------------------------------------------------------------------------
+    std::cout << "------------------------------" << std::endl;
+    std::cout << "Trying to Removing a Non-existent User" << std::endl;
+    try {
+        us.removeUser(nullptr);
+    } catch (const std::exception &e) {
+        std::cout << "error: " << e.what() << std::endl;
+    }
+//----------------------------------------------------------------------------------------------------------------------
+    std::cout << "------------------------------" << std::endl;
+    std::cout << "Trying to Fetch a User with Non-existent ID" << std::endl;
+    try {
+        us.getUserById(999999); // Assuming this ID doesn't exist.
+    } catch (const std::exception &e) {
         std::cout << "error: " << e.what() << std::endl;
     }
 

@@ -3,6 +3,7 @@
 #include "../exceptions/InvalidLengthException.h"
 
 #include <utility>
+
 /**
  * @brief Implementation of the getText method from the Message class.
  *

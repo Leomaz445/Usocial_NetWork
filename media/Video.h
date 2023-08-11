@@ -8,10 +8,11 @@
 
 #include "Photo.h"
 #include <iostream>
+
 /**
  * @brief Derived class representing Video media.
  */
-class Video: public Media {
+class Video : public Media {
 private:
     /**
     * @brief Constant indicating media type.

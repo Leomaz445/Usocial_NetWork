@@ -1,6 +1,7 @@
 
 #include "USocial.h"
 #include "../users/BusinessUser.h"
+
 /**
  * @brief Remove a user from the platform.
  * @details Removes the user from all friend lists and deletes it.
@@ -14,8 +15,8 @@ void USocial::removeUser(User *user) {
     }
 
     if (isExists(user->getId())) {
-        for (auto& userPair : _users) {
-            User* anotherUser = userPair.second;
+        for (auto &userPair: _users) {
+            User *anotherUser = userPair.second;
             anotherUser->removeFriend(user);
         }
 
@@ -108,7 +109,7 @@ USocial::~USocial() {
  * @param other Another USocial object to copy from.
  */
 USocial::USocial(const USocial &other) {
-    for (auto &pair : other._users) {
+    for (auto &pair: other._users) {
         _users[pair.first] = new User(*(pair.second));
     }
 }
@@ -118,16 +119,16 @@ USocial::USocial(const USocial &other) {
  * @param other Another USocial object to copy from.
  * @return Reference to this USocial object.
  */
-USocial& USocial::operator=(const USocial &other) {
+USocial &USocial::operator=(const USocial &other) {
     if (this != &other) {
         // Free the existing resources
-        for (auto &pair : _users) {
+        for (auto &pair: _users) {
             delete pair.second;
         }
         _users.clear();
 
         // Copy from other
-        for (auto &pair : other._users) {
+        for (auto &pair: other._users) {
             _users[pair.first] = new User(*(pair.second));
         }
     }

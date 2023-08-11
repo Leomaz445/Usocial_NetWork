@@ -9,8 +9,9 @@
 
 class NullUserException : public std::exception {
 public:
-    const char * what() const noexcept override {
+    const char *what() const noexcept override {
         return "Null user pointer passed to function";
     }
 };
+
 #endif //UNTITLED3_NULLUSEREXCEPTION_H

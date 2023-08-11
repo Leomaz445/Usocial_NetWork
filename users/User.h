@@ -145,7 +145,7 @@ public:
 
     void checkIfBelongToTheSameNetWork(User *pUser);
 
-    USocial* getUSocialInstance() const;  // Getter function for 'us'
+    USocial *getUSocialInstance() const;  // Getter function for 'us'
 };
 
 #endif //UNTITLED3_USER_H
